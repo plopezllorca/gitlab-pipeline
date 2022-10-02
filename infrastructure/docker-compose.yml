@@ -1,0 +1,11 @@
+version: "1.0"
+services:
+  gitlab:
+    image: gitlab/gitlab-ce:15.4.1-ce.0
+    ports:
+      - "10443:443"
+      - "10080:80"
+      - "10022:22"
+  ubuntu-srv:
+    build: .
+    command: tail -F /dev/null
